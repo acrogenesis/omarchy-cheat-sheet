@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omarchy Hotkeys Cheat Sheet</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.35;
+            color: #222;
+            max-width: 1400px;
+            margin: 12px auto 32px;
+            padding: 0 16px 40px;
+        }
+        .watermark {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: -1; /* behind content */
+            opacity: 0.065; /* slightly darker on screen */
+        }
+        .watermark pre {
+            margin: 0;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 11px;
+            line-height: 1.05;
+            white-space: pre;
+            text-align: center;
+            letter-spacing: 0.5px;
+            color: #111;
+            text-shadow: 0 0 2px rgba(0,0,0,0.15);
+        }
+        h1 {
+            text-align: center;
+            margin: 0 0 8px;
+            font-size: 2rem;
+            line-height: 1.15;
+        }
+        .meta-note { text-align:center; font-size:12px; margin-bottom:12px; color:#555; }
+        .container {
+            column-count: 2;
+            column-gap: 28px;
+        }
+        section {
+            break-inside: avoid-column;
+            margin: 0 0 12px;
+            padding: 0 0 4px;
+        }
+        h2 {
+            border-bottom: 1px solid #666;
+            padding: 0 0 2px;
+            margin: 0 0 4px;
+            font-size: 1.05rem;
+        }
+        h3 {
+            border-bottom: 1px solid #999;
+            padding: 0 0 2px;
+            margin: 4px 0 4px;
+            font-size: .85rem;
+            font-weight: 600;
+        }
+        table.compact {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 0 8px;
+            font-size: .7rem;
+            table-layout: fixed;
+        }
+        table.compact tr { border-bottom: 1px solid #eee; }
+        table.compact tr:last-child { border-bottom: none; }
+        table.compact th, table.compact td {
+            text-align: left;
+            padding: 2px 4px 1px;
+            vertical-align: top;
+            word-break: break-word;
+            background: transparent; /* allow watermark to show through */
+        }
+    table.compact th { background: transparent; font-weight:600; }
+        code {
+            background: transparent; /* fully transparent so watermark shows */
+            padding: 0 2px;
+            border-radius: 2px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: .65rem;
+            white-space: nowrap;
+            font-weight: 600;
+            letter-spacing: .3px;
+        }
+        .print-button {
+            display: inline-block;
+            margin: 8px auto 16px;
+            padding: 8px 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Mobile fallback */
+        @media (max-width: 900px) {
+            .container { column-count: 1; }
+            table.compact { font-size: .8rem; }
+            code { font-size: .7rem; }
+        }
+
+        /* Print optimization */
+        @media print {
+            @page { size: A4; margin: 0.6cm 0.6cm 0.7cm; }
+            body { margin:0; padding:.4cm .55cm .6cm; font-size:9pt; }
+            h1 { font-size:20pt; margin:0 0 4px; }
+            .meta-note { font-size:7pt; margin:0 0 6px; }
+            .print-button { display:none; }
+            .container { column-count: 3; column-gap:18px; }
+            section { break-inside: avoid; }
+            h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+            table.compact { font-size:6.7pt; margin:0 0 6px; }
+            table.compact th, table.compact td { padding:1px 3px 0; }
+            code { font-size:6pt; background: transparent; }
+            .watermark { opacity:0.11; }
+            /* Remove repeating headers to save space except first table */
+            table.compact tr:first-child { display:none; }
+            .container table.compact:first-of-type tr:first-child { display:table-row; }
+            /* Tighten vertical whitespace */
+            h2 { font-size:10pt; }
+            h3 { font-size:7.5pt; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="watermark" aria-hidden="true">
+<pre>
+                 ▄▄▄
+ ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄
+███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
+███   ███  ███   ███   ███  ███   ███  ███   ███  ███   █▀   ███   ███  ███   ███
+███   ███  ███   ███   ███ ▄███▄▄▄███ ▄███▄▄▄██▀  ███       ▄███▄▄▄███▄ ███▄▄▄███
+███   ███  ███   ███   ███ ▀███▀▀▀███ ▀███▀▀▀▀    ███      ▀▀███▀▀▀███  ▀▀▀▀▀▀███
+███   ███  ███   ███   ███  ███   ███ ██████████  ███   █▄   ███   ███  ▄██   ███
+███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
+ ▀█████▀    ▀█   ███   █▀   ███   █▀   ███   ███  ███████▀   ███   █▀    ▀█████▀
+                                       ███   █▀
+</pre>
+    </div>
+
+    <h1>Omarchy Hotkeys</h1>
+    <div class="meta-note">Compact printable cheat sheet by <a href="https://x.com/acrogenesis">@acrogenesis</a>. Press the button or use the browser print dialog.</div>
+    <button class="print-button" onclick="window.print()">Print</button>
+
+    <div class="container">
+        <section>
+            <h2>Navigating</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + Space</code></td><td>Application launcher</td></tr>
+                <tr><td><code>Super + Alt + Space</code></td><td>Omarchy control menu</td></tr>
+                <tr><td><code>Super + Escape</code></td><td>Lock/suspend/relaunch/restart/shutdown</td></tr>
+                <tr><td><code>Super + W</code></td><td>Close window</td></tr>
+                <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to workspace</td></tr>
+                <tr><td><code>Shift + Super + 1/2/3/4</code></td><td>Move window to workspace</td></tr>
+                <tr><td><code>Ctrl + 1/2/3/..</code></td><td>Jump to browser tab</td></tr>
+                <tr><td><code>F11</code></td><td>Go full screen</td></tr>
+                <tr><td><code>Shift + F11</code></td><td>Force full screen (e.g., Spotify)</td></tr>
+                <tr><td><code>Super + Arrow</code></td><td>Move focus to window</td></tr>
+                <tr><td><code>Super + Shift + Arrow</code></td><td>Swap window with another</td></tr>
+                <tr><td><code>Super + Equal</code></td><td>Grow windows to the left</td></tr>
+                <tr><td><code>Super + Minus</code></td><td>Grow windows to the right</td></tr>
+                <tr><td><code>Super + Shift + Equal</code></td><td>Grow windows to the bottom</td></tr>
+                <tr><td><code>Super + Shift + Minus</code></td><td>Grow windows to the top</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Launching apps</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + Return</code></td><td>Terminal</td></tr>
+                <tr><td><code>Super + B</code></td><td>Browser</td></tr>
+                <tr><td><code>Super + F</code></td><td>File manager</td></tr>
+                <tr><td><code>Super + T</code></td><td>Activity (btop)</td></tr>
+                <tr><td><code>Super + M</code></td><td>Music (Spotify)</td></tr>
+                <tr><td><code>Super + /</code></td><td>Password manager (1password)</td></tr>
+                <tr><td><code>Super + N</code></td><td>Neovim</td></tr>
+                <tr><td><code>Super + C</code></td><td>Calendar (HEY)</td></tr>
+                <tr><td><code>Super + E</code></td><td>Email (HEY)</td></tr>
+                <tr><td><code>Super + A</code></td><td>AI (ChatGPT)</td></tr>
+                <tr><td><code>Super + G</code></td><td>Messenger (Signal)</td></tr>
+                <tr><td><code>Super + Shift + G</code></td><td>Messenger (WhatsApp)</td></tr>
+                <tr><td><code>Super + Alt + G</code></td><td>Messenger (Google)</td></tr>
+                <tr><td><code>Super + D</code></td><td>Docker (LazyDocker)</td></tr>
+                <tr><td><code>Super + O</code></td><td>Obsidian</td></tr>
+                <tr><td><code>Super + X</code></td><td>X</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Capture</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Print Screen</code></td><td>Screenshot a region</td></tr>
+                <tr><td><code>Shift + Print Screen</code></td><td>Screenshot a window</td></tr>
+                <tr><td><code>Ctrl + Print Screen</code></td><td>Screenshot a monitor</td></tr>
+                <tr><td><code>Alt + Print Screen</code></td><td>Screenrecord a region</td></tr>
+                <tr><td><code>Ctrl + Alt + Print Screen</code></td><td>Screenrecord a monitor</td></tr>
+                <tr><td><code>Super + Print Screen</code></td><td>Color picker</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Notifications</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + ,</code></td><td>Dismiss latest notification</td></tr>
+                <tr><td><code>Shift + Super + ,</code></td><td>Dismiss all notifications</td></tr>
+                <tr><td><code>Ctrl + Super + ,</code></td><td>Toggle silencing notifications</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Style</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Ctrl + Shift + Super + Space</code></td><td>Pick a new theme</td></tr>
+                <tr><td><code>Ctrl + Super + Space</code></td><td>Next background image</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Toggles</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Ctrl + Super + I</code></td><td>Toggle idle/sleep prevention</td></tr>
+                <tr><td><code>Ctrl + Super + N</code></td><td>Toggle nightlight display</td></tr>
+                <tr><td><code>Shift + Super + Space</code></td><td>Toggle the top bar</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>File Manager</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Ctrl + L</code></td><td>Go to path</td></tr>
+                <tr><td><code>Space</code></td><td>Preview file (arrows navigate)</td></tr>
+                <tr><td><code>Backspace</code></td><td>Go back one folder</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Apple Display Brightness</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Ctrl + F1</code></td><td>Turn down brightness</td></tr>
+                <tr><td><code>Ctrl + F2</code></td><td>Turn up brightness</td></tr>
+                <tr><td><code>Ctrl + Shift + F2</code></td><td>Turn up brightness to maximum</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Neovim (w/ lazyvim)</h2>
+            <h3>Navigation</h3>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Space</code></td><td>Show command options</td></tr>
+                <tr><td><code>Space Space</code></td><td>Open file via fuzzy search</td></tr>
+                <tr><td><code>Space E</code></td><td>Toggle sidebar</td></tr>
+                <tr><td><code>Space G G</code></td><td>Show git controls</td></tr>
+                <tr><td><code>Space S G</code></td><td>Search file content</td></tr>
+                <tr><td><code>Ctrl + W W</code></td><td>Jump between sidebar and editor</td></tr>
+                <tr><td><code>Ctrl + Left/Right</code></td><td>Change size of sidebar</td></tr>
+                <tr><td><code>Shift + H</code></td><td>Go to left file tab</td></tr>
+                <tr><td><code>Shift + L</code></td><td>Go to right file tab</td></tr>
+                <tr><td><code>Space B D</code></td><td>Close file tab</td></tr>
+            </table>
+            <h3>While in sidebar</h3>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>A</code></td><td>Add new file in parent dir</td></tr>
+                <tr><td><code>Shift + A</code></td><td>Add new subdir in parent dir</td></tr>
+                <tr><td><code>D</code></td><td>Delete highlighted file/dir</td></tr>
+                <tr><td><code>M</code></td><td>Move highlighted file/dir</td></tr>
+                <tr><td><code>R</code></td><td>Rename highlighted file/dir</td></tr>
+                <tr><td><code>?</code></td><td>Show help for all commands</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Quick Emojis</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>EM</th><th>Clue</th></tr>
+                <tr><td><code>CapsLock M S</code></td><td>😄</td><td>smile</td></tr>
+                <tr><td><code>CapsLock M C</code></td><td>😂</td><td>cry</td></tr>
+                <tr><td><code>CapsLock M L</code></td><td>😍</td><td>love</td></tr>
+                <tr><td><code>CapsLock M V</code></td><td>✌️</td><td>victory</td></tr>
+                <tr><td><code>CapsLock M H</code></td><td>❤️</td><td>heart</td></tr>
+                <tr><td><code>CapsLock M Y</code></td><td>👍</td><td>yes</td></tr>
+                <tr><td><code>CapsLock M N</code></td><td>👎</td><td>no</td></tr>
+                <tr><td><code>CapsLock M F</code></td><td>🖕</td><td>-</td></tr>
+                <tr><td><code>CapsLock M W</code></td><td>🤞</td><td>wish</td></tr>
+                <tr><td><code>CapsLock M R</code></td><td>🤘</td><td>rock</td></tr>
+                <tr><td><code>CapsLock M K</code></td><td>😘</td><td>kiss</td></tr>
+                <tr><td><code>CapsLock M E</code></td><td>🙄</td><td>eyeroll</td></tr>
+                <tr><td><code>CapsLock M P</code></td><td>🙏</td><td>pray</td></tr>
+                <tr><td><code>CapsLock M D</code></td><td>🤤</td><td>drool</td></tr>
+                <tr><td><code>CapsLock M M</code></td><td>💰</td><td>money</td></tr>
+                <tr><td><code>CapsLock M X</code></td><td>🎉</td><td>xellebrate</td></tr>
+                <tr><td><code>CapsLock M 1</code></td><td>💯</td><td>100%</td></tr>
+                <tr><td><code>CapsLock M T</code></td><td>🥂</td><td>toast</td></tr>
+                <tr><td><code>CapsLock M O</code></td><td>👌</td><td>ok</td></tr>
+                <tr><td><code>CapsLock M G</code></td><td>👋</td><td>greeting</td></tr>
+                <tr><td><code>CapsLock M A</code></td><td>💪</td><td>arm</td></tr>
+                <tr><td><code>CapsLock M B</code></td><td>🤯</td><td>blowing</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Quick Completions</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Completion</th></tr>
+                <tr><td><code>CapsLock Space Space</code></td><td>— (mdash)</td></tr>
+                <tr><td><code>CapsLock Space N</code></td><td>Your name</td></tr>
+                <tr><td><code>CapsLock Space E</code></td><td>Your email</td></tr>
+            </table>
+        </section>
+    </div>
+
+</body>
+</html>
