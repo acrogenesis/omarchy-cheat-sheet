@@ -79,6 +79,8 @@
             word-break: break-word;
             background: transparent; /* allow watermark to show through */
         }
+        /* Remove left indent on first column to gain width */
+        table.compact th:first-child, table.compact td:first-child { padding-left:0; }
     table.compact th { background: transparent; font-weight:600; }
         code {
             background: transparent; /* fully transparent so watermark shows */
@@ -90,6 +92,7 @@
             font-weight: 600;
             letter-spacing: .3px;
         }
+    code.sm { font-size:.58rem; letter-spacing:.2px; }
         .print-button {
             display: inline-block;
             margin: 8px auto 16px;
@@ -164,7 +167,7 @@
                 <tr><td><code>Super + Escape</code></td><td>Lock/suspend/relaunch/restart/shutdown</td></tr>
                 <tr><td><code>Super + W</code></td><td>Close window</td></tr>
                 <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to workspace</td></tr>
-                <tr><td><code>Shift + Super + 1/2/3/4</code></td><td>Move window to workspace</td></tr>
+                <tr><td><code>Shift + Super + 1..4</code></td><td>Move window to workspace</td></tr>
                 <tr><td><code>Ctrl + 1/2/3/..</code></td><td>Jump to browser tab</td></tr>
                 <tr><td><code>F11</code></td><td>Go full screen</td></tr>
                 <tr><td><code>Shift + F11</code></td><td>Force full screen (e.g., Spotify)</td></tr>
@@ -208,7 +211,7 @@
                 <tr><td><code>Shift + Print Screen</code></td><td>Screenshot a window</td></tr>
                 <tr><td><code>Ctrl + Print Screen</code></td><td>Screenshot a monitor</td></tr>
                 <tr><td><code>Alt + Print Screen</code></td><td>Screenrecord a region</td></tr>
-                <tr><td><code>Ctrl + Alt + Print Screen</code></td><td>Screenrecord a monitor</td></tr>
+                <tr><td><code>Ctrl + Alt + PrintScr</code></td><td>Screenrecord a monitor</td></tr>
                 <tr><td><code>Super + Print Screen</code></td><td>Color picker</td></tr>
             </table>
         </section>
@@ -227,7 +230,7 @@
             <h2>Style</h2>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
-                <tr><td><code>Ctrl + Shift + Super + Space</code></td><td>Pick a new theme</td></tr>
+                <tr><td><code>Ctrl+Shift+Super+Space</code></td><td>Pick a new theme</td></tr>
                 <tr><td><code>Ctrl + Super + Space</code></td><td>Next background image</td></tr>
             </table>
         </section>
