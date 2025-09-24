@@ -116,6 +116,11 @@
             letter-spacing: .3px;
         }
     code.sm { font-size:.58rem; letter-spacing:.2px; }
+        .note {
+            margin: 0 0 6px;
+            font-size: .7rem;
+            color: #444;
+        }
         .print-button {
             display: inline-block;
             margin: 8px auto 16px;
@@ -139,7 +144,7 @@
         /* Print optimization */
         @media print {
             @page { size: A4; margin: 0.6cm 0.6cm 0.7cm; }
-            body { margin:0; padding:.4cm .55cm .6cm; font-size:9pt; }
+            body { margin:0; padding:.32cm .38cm .48cm; font-size:9pt; }
             h1 { font-size:20pt; margin:0 0 4px; }
             /* Move the meta-note out of the header area and render it as a fixed footer when printing. */
             .meta-note {
@@ -158,7 +163,7 @@
             /* Inject minimal footer */
             .meta-note:before { content:"by @acrogenesis"; font-weight:500; }
             .print-button { display:none; }
-            .container { column-count: 3; column-gap:18px; }
+            .container { column-count: 3; column-gap:14px; }
             section { break-inside: avoid; }
             h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
             table.compact { font-size:6.7pt; margin:0 0 6px; }
@@ -171,6 +176,7 @@
             /* Tighten vertical whitespace */
             h2 { font-size:10pt; }
             h3 { font-size:7.5pt; }
+            .note { font-size:6.1pt; margin:0 0 4px; }
         }
     </style>
 </head>
@@ -213,18 +219,28 @@
 
     <div class="container">
         <section>
+            <h2>Hotkeys</h2>
+            <p class="note">See the full list any time with <code>Super + K</code>.</p>
+        </section>
+
+        <section>
             <h2>Navigating</h2>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Space</code></td><td>Application launcher</td></tr>
                 <tr><td><code>Super + Alt + Space</code></td><td>Omarchy control menu</td></tr>
-                <tr><td><code>Super + Escape</code></td><td>Lock/suspend/relaunch/restart/shutdown</td></tr>
+                <tr><td><code>Super + Escape</code></td><td>Lock/suspend/relaunch/restart/shutdown computer</td></tr>
                 <tr><td><code>Super + W</code></td><td>Close window</td></tr>
-                <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to workspace</td></tr>
-                <tr><td><code>Shift + Super + 1..4</code></td><td>Move window to workspace</td></tr>
+                <tr><td><code>Ctrl + Alt + Del</code></td><td>Close all windows</td></tr>
+                <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to specific workspace</td></tr>
+                <tr><td><code>Super + Alt + Tab</code></td><td>Jump to next workspace</td></tr>
+                <tr><td><code>Super+Alt+Shift+Tab</code></td><td>Jump to previous workspace</td></tr>
+                <tr><td><code>Super + Ctrl + Tab</code></td><td>Jump to former workspace</td></tr>
+                <tr><td><code>Shift+Super + 1/2/3/4</code></td><td>Move window to workspace</td></tr>
                 <tr><td><code>Ctrl + 1/2/3/..</code></td><td>Jump to browser tab</td></tr>
                 <tr><td><code>F11</code></td><td>Go full screen</td></tr>
                 <tr><td><code>Shift + F11</code></td><td>Force full screen (e.g., Spotify)</td></tr>
+                <tr><td><code>Alt + F11</code></td><td>Go full width for the window</td></tr>
                 <tr><td><code>Super + Arrow</code></td><td>Move focus to window</td></tr>
                 <tr><td><code>Super + Shift + Arrow</code></td><td>Swap window with another</td></tr>
                 <tr><td><code>Super + Equal</code></td><td>Grow windows to the left</td></tr>
@@ -240,6 +256,7 @@
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Return</code></td><td>Terminal</td></tr>
                 <tr><td><code>Super + B</code></td><td>Browser</td></tr>
+                <tr><td><code>Super + Shift + B</code></td><td>Browser (private/incognito)</td></tr>
                 <tr><td><code>Super + F</code></td><td>File manager</td></tr>
                 <tr><td><code>Super + T</code></td><td>Activity (btop)</td></tr>
                 <tr><td><code>Super + M</code></td><td>Music (Spotify)</td></tr>
@@ -254,7 +271,9 @@
                 <tr><td><code>Super + D</code></td><td>Docker (LazyDocker)</td></tr>
                 <tr><td><code>Super + O</code></td><td>Obsidian</td></tr>
                 <tr><td><code>Super + X</code></td><td>X</td></tr>
+                <tr><td><code>Ctrl + Super + S</code></td><td>Share menu (via LocalSend)</td></tr>
             </table>
+            <p class="note">Change or add bindings in <code>~/.config/hypr/bindings.conf</code>.</p>
         </section>
 
         <section>
@@ -267,7 +286,9 @@
                 <tr><td><code>Alt + Print Screen</code></td><td>Screenrecord a region</td></tr>
                 <tr><td><code>Ctrl + Alt + PrintScr</code></td><td>Screenrecord a monitor</td></tr>
                 <tr><td><code>Super + Print Screen</code></td><td>Color picker</td></tr>
+                <tr><td><code>Alt + Shift + L</code></td><td>Copy current URL from webapp/Chromium</td></tr>
             </table>
+            <p class="note">Start and stop screen recordings with the same hotkey. Capture options also live under <strong>Capture</strong> in the Omarchy menu (<code>Super + Alt + Space</code>).</p>
         </section>
 
         <section>
@@ -286,7 +307,9 @@
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Ctrl+Shift+Super+Space</code></td><td>Pick a new theme</td></tr>
                 <tr><td><code>Ctrl + Super + Space</code></td><td>Next background image</td></tr>
+                <tr><td><code>Super + Backspacer</code></td><td>Toggle transparency on a window</td></tr>
             </table>
+            <p class="note">Extra background images live in <code>~/.config/omarchy/current/backgrounds</code> (also via Omarchy menu &gt; Install &gt; Background).</p>
         </section>
 
         <section>
@@ -296,6 +319,7 @@
                 <tr><td><code>Ctrl + Super + I</code></td><td>Toggle idle/sleep prevention</td></tr>
                 <tr><td><code>Ctrl + Super + N</code></td><td>Toggle nightlight display</td></tr>
                 <tr><td><code>Shift + Super + Space</code></td><td>Toggle the top bar</td></tr>
+                <tr><td><code>Super + Mute</code></td><td>Switch to next audio output</td></tr>
             </table>
         </section>
 
@@ -349,6 +373,7 @@
 
         <section>
             <h2>Quick Emojis</h2>
+            <p class="note">For the full picker use <code>Super + Ctrl + E</code>, or grab one of these quick combos:</p>
             <table class="compact">
                 <tr><th>Hotkey</th><th>EM</th><th>Clue</th></tr>
                 <tr><td><code>CapsLock M S</code></td><td>😄</td><td>smile</td></tr>
@@ -358,7 +383,7 @@
                 <tr><td><code>CapsLock M H</code></td><td>❤️</td><td>heart</td></tr>
                 <tr><td><code>CapsLock M Y</code></td><td>👍</td><td>yes</td></tr>
                 <tr><td><code>CapsLock M N</code></td><td>👎</td><td>no</td></tr>
-                <tr><td><code>CapsLock M F</code></td><td>🖕</td><td>-</td></tr>
+                <tr><td><code>CapsLock M F</code></td><td>🖕</td><td>fuck</td></tr>
                 <tr><td><code>CapsLock M W</code></td><td>🤞</td><td>wish</td></tr>
                 <tr><td><code>CapsLock M R</code></td><td>🤘</td><td>rock</td></tr>
                 <tr><td><code>CapsLock M K</code></td><td>😘</td><td>kiss</td></tr>
@@ -378,6 +403,7 @@
 
         <section>
             <h2>Quick Completions</h2>
+            <p class="note">Add your own in <code>~/.XCompose</code>, then run <code>omarchy-restart-xcompose</code> to reload.</p>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Completion</th></tr>
                 <tr><td><code>CapsLock Space Space</code></td><td>— (mdash)</td></tr>
