@@ -234,14 +234,19 @@
                 <tr><td><code>Super + W</code></td><td>Close window</td></tr>
                 <tr><td><code>Ctrl + Alt + Del</code></td><td>Close all windows</td></tr>
                 <tr><td><code>Super + T</code></td><td>Toggle window between tiling/floating</td></tr>
+                <tr><td><code>Super + J</code></td><td>Toggle window position (horizontal/vertical)</td></tr>
                 <tr><td><code>Super + O</code></td><td>Toggle popping window into sticky'n'floating</td></tr>
+                <tr><td><code>Super + L</code></td><td>Toggle between dwindle and scrolling layout</td></tr>
+                <tr><td><code>Super + P</code></td><td>Toggle pseudo window style (natural v stretch)</td></tr>
                 <tr><td><code>Super + F</code></td><td>Go full screen</td></tr>
                 <tr><td><code>Super + Alt + F</code></td><td>Go full width</td></tr>
+                <tr><td><code>Super + Ctrl + F</code></td><td>Go full screen inside window</td></tr>
                 <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to specific workspace</td></tr>
                 <tr><td><code>Super + Tab</code></td><td>Jump to next workspace</td></tr>
                 <tr><td><code>Super + Shift + Tab</code></td><td>Jump to previous workspace</td></tr>
                 <tr><td><code>Super + Ctrl + Tab</code></td><td>Jump to former workspace</td></tr>
                 <tr><td><code>Super + Shift + 1/2/3/4</code></td><td>Move window to workspace</td></tr>
+                <tr><td><code>Super + Shift + Alt + 1/2/3/4</code></td><td>Move window to workspace without following</td></tr>
                 <tr><td><code>Super + Shift + Alt + Arrows</code></td><td>Move workspaces to directional monitor</td></tr>
                 <tr><td><code>Super + Arrow</code></td><td>Move focus to window in direction of arrow</td></tr>
                 <tr><td><code>Super + Shift + Arrow</code></td><td>Swap window with another in direction of arrow</td></tr>
@@ -249,6 +254,9 @@
                 <tr><td><code>Super + Minus</code></td><td>Grow windows to the right</td></tr>
                 <tr><td><code>Super + Shift + Equal</code></td><td>Grow windows to the bottom</td></tr>
                 <tr><td><code>Super + Shift + Minus</code></td><td>Grow windows to the top</td></tr>
+                <tr><td><code>Super + Left Mouse</code></td><td>Drag window around</td></tr>
+                <tr><td><code>Super + Right Mouse</code></td><td>Resize window</td></tr>
+                <tr><td><code>Super + Scroll Wheel</code></td><td>Scroll through workspaces</td></tr>
                 <tr><td><code>Super + G</code></td><td>Toggle window grouping</td></tr>
                 <tr><td><code>Super + Alt + G</code></td><td>Move window out of grouping</td></tr>
                 <tr><td><code>Super + Alt + Tab</code></td><td>Cycle between windows in grouping</td></tr>
@@ -259,6 +267,12 @@
                 <tr><td><code>Super + Alt + S</code></td><td>Move window to scratchpad workspace</td></tr>
                 <tr><td><code>Super + Ctrl + Z</code></td><td>Zoom in on screen (repeat for more zoom)</td></tr>
                 <tr><td><code>Super + Ctrl + Alt + Z</code></td><td>Zoom fully out from screen</td></tr>
+                <tr><td><code>Super + /</code></td><td>Cycle forward through monitor scaling options</td></tr>
+                <tr><td><code>Super + Alt + /</code></td><td>Cycle backward through monitor scaling options</td></tr>
+                <tr><td><code>Alt + Tab</code></td><td>Cycle forward through windows on active workspace</td></tr>
+                <tr><td><code>Alt + Shift + Tab</code></td><td>Cycle backward through windows on active workspace</td></tr>
+                <tr><td><code>Ctrl + Alt + Tab</code></td><td>Cycle focus forward through monitors</td></tr>
+                <tr><td><code>Ctrl + Alt + Shift + Tab</code></td><td>Cycle focus backwards through monitors</td></tr>
             </table>
         </section>
 
@@ -272,6 +286,20 @@
                 <tr><td><code>Super + Ctrl + S</code></td><td>Share menu (via LocalSend)</td></tr>
                 <tr><td><code>Super + Ctrl + T</code></td><td>Activity (btop)</td></tr>
                 <tr><td><code>Super + Ctrl + C</code></td><td>Capture controls (screenshot/screenrecording/picker)</td></tr>
+                <tr><td><code>Super + Ctrl + O</code></td><td>Toggle menu</td></tr>
+                <tr><td><code>Super + Ctrl + H</code></td><td>Hardware menu</td></tr>
+                <tr><td><code>Super + Ctrl + .</code></td><td>Transcoding menu</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Adjustments</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Shift + Brightness Up</code></td><td>Maximum screen brightness</td></tr>
+                <tr><td><code>Shift + Brightness Down</code></td><td>Minimum screen brightness</td></tr>
+                <tr><td><code>Alt + Brightness Up/Down</code></td><td>Precise 1% brightness changes</td></tr>
+                <tr><td><code>Alt + Volume Up/Down</code></td><td>Precise 1% volume changes</td></tr>
             </table>
         </section>
 
@@ -286,17 +314,23 @@
                 <tr><td><code>Super + Shift + F</code></td><td>File manager</td></tr>
                 <tr><td><code>Super + Shift + Alt + F</code></td><td>File manager in cwd of terminal</td></tr>
                 <tr><td><code>Super + Shift + M</code></td><td>Music (Spotify)</td></tr>
+                <tr><td><code>Super + Shift + Alt + M</code></td><td>Music (cliamp)</td></tr>
                 <tr><td><code>Super + Shift + /</code></td><td>Password manager (1password)</td></tr>
                 <tr><td><code>Super + Shift + N</code></td><td>Neovim</td></tr>
                 <tr><td><code>Super + Shift + C</code></td><td>Calendar (HEY)</td></tr>
                 <tr><td><code>Super + Shift + E</code></td><td>Email (HEY)</td></tr>
                 <tr><td><code>Super + Shift + A</code></td><td>AI (ChatGPT)</td></tr>
+                <tr><td><code>Super + Shift + Alt + A</code></td><td>AI (Grok)</td></tr>
                 <tr><td><code>Super + Shift + G</code></td><td>Messenger (Signal)</td></tr>
                 <tr><td><code>Super + Shift + Alt + G</code></td><td>Messenger (WhatsApp)</td></tr>
                 <tr><td><code>Super + Shift + Ctrl + G</code></td><td>Messenger (Google)</td></tr>
+                <tr><td><code>Super + Shift + P</code></td><td>Google Photos</td></tr>
                 <tr><td><code>Super + Shift + D</code></td><td>Docker (LazyDocker)</td></tr>
                 <tr><td><code>Super + Shift + O</code></td><td>Obsidian</td></tr>
+                <tr><td><code>Super + Shift + W</code></td><td>Writing (Typora)</td></tr>
                 <tr><td><code>Super + Shift + X</code></td><td>X</td></tr>
+                <tr><td><code>Super + Shift + Alt + X</code></td><td>X Compose</td></tr>
+                <tr><td><code>Super + Shift + Y</code></td><td>YouTube</td></tr>
             </table>
             <p class="note">Change or add bindings in <code>~/.config/hypr/bindings.conf</code>.</p>
         </section>
@@ -321,8 +355,10 @@
                 <tr><td><code>Print Screen</code></td><td>Screenshot</td></tr>
                 <tr><td><code>Alt + Print Screen</code></td><td>Screenrecord</td></tr>
                 <tr><td><code>Super + Print Screen</code></td><td>Color picker</td></tr>
+                <tr><td><code>Super + Ctrl + Print Screen</code></td><td>Text extraction to clipboard</td></tr>
                 <tr><td><code>Alt + Shift + L</code></td><td>Copy current URL from webapp or Chromium</td></tr>
-                <tr><td><code>Super + Ctrl + X</code></td><td>Start/stop dictation</td></tr>
+                <tr><td><code>Super + Ctrl + X</code></td><td>Start/stop dictation (requires Install &gt; AI &gt; Dictation)</td></tr>
+                <tr><td><code>F9</code></td><td>Push-to-talk dictation (requires Install &gt; AI &gt; Dictation)</td></tr>
             </table>
             <p class="note">Start and stop screen recordings with the same hotkey. All capture options also live under <strong>Capture</strong> in the Omarchy menu (<code>Super + Alt + Space</code>).</p>
         </section>
@@ -345,8 +381,7 @@
                 <tr><td><code>Super + Ctrl + Shift + Space</code></td><td>Pick a new theme</td></tr>
                 <tr><td><code>Super + Ctrl + Space</code></td><td>Pick theme background</td></tr>
                 <tr><td><code>Super + Backspace</code></td><td>Toggle transparency on a window</td></tr>
-                <tr><td><code>Super + Ctrl + Backspace</code></td><td>Cycle through monitor scaling</td></tr>
-                <tr><td><code>Super + Ctrl + Alt + Backspace</code></td><td>Toggle single-window square aspect</td></tr>
+                <tr><td><code>Super + Ctrl + Backspace</code></td><td>Toggle single-window square aspect</td></tr>
             </table>
             <p class="note">Extra background images live in <code>~/.config/omarchy/current/backgrounds</code> (also via Omarchy menu &gt; Install &gt; Background).</p>
         </section>
@@ -357,8 +392,31 @@
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Ctrl + I</code></td><td>Toggle idle/sleep prevention</td></tr>
                 <tr><td><code>Super + Ctrl + N</code></td><td>Toggle nightlight display temperature</td></tr>
+                <tr><td><code>Super + Ctrl + Delete</code></td><td>Toggle laptop display on/off</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + Delete</code></td><td>Toggle laptop display mirroring</td></tr>
                 <tr><td><code>Super + Shift + Space</code></td><td>Toggle the top bar</td></tr>
                 <tr><td><code>Super + Mute</code></td><td>Switch to next audio output</td></tr>
+                <tr><td><code>Super + Shift + Backspace</code></td><td>Toggle window gaps</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Reminders</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + Ctrl + R</code></td><td>Set a reminder</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + R</code></td><td>See all reminders</td></tr>
+                <tr><td><code>Super + Ctrl + Shift + R</code></td><td>Clear all reminders</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Notices</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + Ctrl + Alt + T</code></td><td>Show time as notification</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + B</code></td><td>Show battery as notification</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + W</code></td><td>Show weather as notification</td></tr>
             </table>
         </section>
 
@@ -382,6 +440,7 @@
                 <tr><td><code>Prefix + k</code></td><td>Kill window</td></tr>
                 <tr><td><code>Prefix + r</code></td><td>Rename window</td></tr>
                 <tr><td><code>Alt + 1-9</code></td><td>Go to specific window</td></tr>
+                <tr><td><code>Alt + Arrow Left/Right</code></td><td>Move between windows</td></tr>
             </table>
             <h3>Sessions</h3>
             <table class="compact">
@@ -391,6 +450,7 @@
                 <tr><td><code>Prefix + R</code></td><td>Rename session</td></tr>
                 <tr><td><code>Prefix + N</code></td><td>Next session</td></tr>
                 <tr><td><code>Prefix + P</code></td><td>Previous session</td></tr>
+                <tr><td><code>Alt + Arrow Up/Down</code></td><td>Move between sessions</td></tr>
                 <tr><td><code>Prefix + s</code></td><td>List sessions</td></tr>
                 <tr><td><code>Prefix + d</code></td><td>Detach from session</td></tr>
             </table>
