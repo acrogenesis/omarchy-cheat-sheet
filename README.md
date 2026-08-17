@@ -1,6 +1,6 @@
 # Omarchy Printable Hotkeys Cheat Sheet
 
-A compact, printable reference of [Omarchy's hotkeys](https://learn.omacom.io/2/the-omarchy-manual/53/hotkeys)
+A compact, printable reference of [Omarchy's hotkeys](https://omarchy.org/manual/hotkeys/)
 
 **Live page:** [https://acrogenesis.com/omarchy-cheat-sheet/](https://acrogenesis.com/omarchy-cheat-sheet/)
 
