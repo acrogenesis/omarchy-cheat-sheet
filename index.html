@@ -133,6 +133,7 @@
             text-align: center;
             font-size: 14px;
         }
+        .print-attribution { display: none; }
 
         /* Mobile fallback */
         @media (max-width: 900px) {
@@ -147,23 +148,22 @@
             @page { size: A4; margin: 0.6cm 0.6cm 0.7cm; }
             body { margin:0; padding:.32cm .38cm .48cm; font-size:9pt; }
             h1 { font-size:20pt; margin:0 0 4px; }
-            /* Move the meta-note out of the header area and render it as a fixed footer when printing. */
-            .meta-note {
-                position: fixed;
-                bottom: 0.35cm;
-                left: 0.55cm;
-                right: 0.55cm;
-                font-size:7pt;
-                margin:0;
-                text-align:center;
-                color:#555;
-                background: transparent;
-            }
-            /* Hide on-screen verbose note text wrapper when printing */
-            .meta-note .screen-note { display:none !important; }
-            /* Inject minimal footer */
-            .meta-note:before { content:"by @acrogenesis"; font-weight:500; }
+            .meta-note { display:none !important; }
             .print-button { display:none; }
+            /* Last-page only: absolute to the document, not fixed (fixed repeats on every page). */
+            body { position: relative; padding-bottom: 0.7cm; }
+            .print-attribution {
+                display: block;
+                position: absolute;
+                bottom: 0.1cm;
+                left: 0;
+                right: 0;
+                margin: 0;
+                text-align: center;
+                font-size: 7pt;
+                color: #555;
+                font-weight: 500;
+            }
             .container { column-count: 3; column-gap:12px; }
             /* Large sections must be allowed to split or page 1 stays empty. */
             section { break-inside: auto; }
@@ -604,6 +604,7 @@
             </table>
         </section>
     </div>
+    <p class="print-attribution">by @acrogenesis</p>
 
 </body>
 </html>
