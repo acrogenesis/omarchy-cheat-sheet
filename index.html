@@ -172,6 +172,7 @@
             table.compact th, table.compact td { padding:1px 2px 0; }
             table.compact td:first-child { width: 48%; }
             table.compact tr { break-inside: avoid; }
+            table.compact tr:first-child { break-after: avoid; }
             code { font-size:5.6pt; background: transparent; white-space: normal; }
             .watermark { opacity:0.045; }
             /* Remove repeating headers to save space except first table */
@@ -219,6 +220,7 @@
 
     <h1>Omarchy Hotkeys</h1>
     <div class="meta-note"><span class="screen-note">Compact printable cheat sheet by <a href="https://x.com/acrogenesis">@acrogenesis</a>. Press the button or use the browser print dialog.</span></div>
+    <p class="note" style="text-align:center">Checked <time datetime="2026-10-26">October 26, 2026</time> against the <a href="https://omarchy.org/manual/hotkeys/">Omarchy manual</a> and <a href="https://github.com/omacom/omarchy/tree/39d56653d649312453316f2536fcfb9982f08fb8/default/hypr/bindings">default bindings</a>. Personal overrides may differ. <strong>Super</strong> = Windows/Command key.</p>
     <button class="print-button" onclick="window.print()">Print</button>
 
     <div class="container">
@@ -228,28 +230,31 @@
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Space</code></td><td>Omarchy menu (apps and everything else)</td></tr>
-                <tr><td><code>Super + Alt + Space</code></td><td>Apps menu</td></tr>
+                <tr><td><code>Super + Alt + Space</code></td><td>App grid</td></tr>
                 <tr><td><code>Super + Escape</code></td><td>System menu (suspend, restart, etc)</td></tr>
                 <tr><td><code>Super + Ctrl + L</code></td><td>Lock computer</td></tr>
-                <tr><td><code>Super + W</code></td><td>Close window</td></tr>
+                <tr><td><code>Super + W</code> / <code>Super + Q</code></td><td>Close window</td></tr>
+                <tr><td><code>Super + M</code></td><td>Minimize window to the dock</td></tr>
                 <tr><td><code>Ctrl + Alt + Del</code></td><td>Close all windows</td></tr>
                 <tr><td><code>Super + T</code></td><td>Toggle window between tiling/floating</td></tr>
                 <tr><td><code>Super + J</code></td><td>Toggle window position (horizontal/vertical)</td></tr>
                 <tr><td><code>Super + O</code></td><td>Toggle popping window into sticky'n'floating</td></tr>
-                <tr><td><code>Super + L</code></td><td>Toggle between dwindle and scrolling layout</td></tr>
+                <tr><td><code>Super + L</code></td><td>Cycle dwindle, scrolling, and floating layouts</td></tr>
+                <tr><td><code>Super + Alt + L</code></td><td>Cycle layouts in reverse</td></tr>
                 <tr><td><code>Super + P</code></td><td>Toggle pseudo window style (natural v stretch)</td></tr>
                 <tr><td><code>Super + F</code></td><td>Go full screen</td></tr>
                 <tr><td><code>Super + Alt + F</code></td><td>Go full width</td></tr>
                 <tr><td><code>Super + Ctrl + F</code></td><td>Go full screen inside window</td></tr>
-                <tr><td><code>Super + 1/2/3/4</code></td><td>Jump to specific workspace</td></tr>
-                <tr><td><code>Super + Tab</code></td><td>Jump to next workspace</td></tr>
-                <tr><td><code>Super + Shift + Tab</code></td><td>Jump to previous workspace</td></tr>
-                <tr><td><code>Super + Ctrl + Tab</code></td><td>Jump to former workspace</td></tr>
-                <tr><td><code>Super + Shift + 1/2/3/4</code></td><td>Move window to workspace</td></tr>
-                <tr><td><code>Super + Shift + Alt + 1/2/3/4</code></td><td>Move window to workspace without following</td></tr>
-                <tr><td><code>Super + Shift + Alt + Arrows</code></td><td>Move workspaces to directional monitor</td></tr>
-                <tr><td><code>Super + Arrow</code></td><td>Move focus to window in direction of arrow</td></tr>
-                <tr><td><code>Super + Shift + Arrow</code></td><td>Swap window with another in direction of arrow</td></tr>
+                <tr><td><code>Super + 1-9/0</code></td><td>Jump to workspace on focused monitor</td></tr>
+                <tr><td><code>Super + Tab</code></td><td>Next workspace on focused monitor</td></tr>
+                <tr><td><code>Super + Shift + Tab</code></td><td>Previous workspace on focused monitor</td></tr>
+                <tr><td><code>Super + Ctrl + Tab</code></td><td>Former workspace on focused monitor</td></tr>
+                <tr><td><code>Super + Shift + 1-9/0</code></td><td>Move window to workspace on focused monitor</td></tr>
+                <tr><td><code>Super + Shift + Alt + 1-9/0</code></td><td>Move window to workspace without following</td></tr>
+                <tr><td><code>Super + Shift + Ctrl + Arrows</code></td><td>Move window to monitor in that direction</td></tr>
+                <tr><td><code>Super + Shift + Alt + Arrows</code></td><td>Move workspace to monitor in that direction</td></tr>
+                <tr><td><code>Super + Arrow</code></td><td>Focus window in that direction, across monitors</td></tr>
+                <tr><td><code>Super + Shift + Arrow</code></td><td>Swap window in that direction, across monitors</td></tr>
                 <tr><td><code>Super + Minus</code></td><td>Expand window left</td></tr>
                 <tr><td><code>Super + Equal</code></td><td>Shrink window left</td></tr>
                 <tr><td><code>Super + Shift + Minus</code></td><td>Shrink window up</td></tr>
@@ -260,16 +265,19 @@
                 <tr><td><code>Super + Home</code></td><td>Restore saved window width</td></tr>
                 <tr><td><code>Super + Left Mouse</code></td><td>Drag window around</td></tr>
                 <tr><td><code>Super + Right Mouse</code></td><td>Resize window</td></tr>
-                <tr><td><code>Super + Scroll Wheel</code></td><td>Scroll through workspaces</td></tr>
+                <tr><td><code>Super + Scroll Wheel</code></td><td>Scroll workspaces on focused monitor</td></tr>
                 <tr><td><code>Super + G</code></td><td>Toggle window grouping</td></tr>
                 <tr><td><code>Super + Alt + G</code></td><td>Move window out of grouping</td></tr>
                 <tr><td><code>Super + Alt + Tab</code></td><td>Cycle between windows in grouping</td></tr>
                 <tr><td><code>Super + Alt + Shift + Tab</code></td><td>Cycle backward between windows in grouping</td></tr>
+                <tr><td><code>Super + Alt + Scroll Wheel</code></td><td>Cycle between windows in grouping</td></tr>
                 <tr><td><code>Super + Alt + 1/2/3/4/5</code></td><td>Jump to specific window in grouping</td></tr>
-                <tr><td><code>Super + Alt + Arrow</code></td><td>Move window into grouping in direction of arrow</td></tr>
+                <tr><td><code>Super + Alt + Arrow</code></td><td>Move into group in that direction, across monitors</td></tr>
                 <tr><td><code>Super + Ctrl + Left/Right</code></td><td>Move between windows inside a tiling group</td></tr>
-                <tr><td><code>Super + S</code></td><td>Show scratchpad workspace overlay</td></tr>
-                <tr><td><code>Super + Alt + S</code></td><td>Move window to scratchpad workspace</td></tr>
+                <tr><td><code>Super + S</code></td><td>Toggle full scratchpad</td></tr>
+                <tr><td><code>Super + Alt + S</code></td><td>Move window to full scratchpad</td></tr>
+                <tr><td><code>Super + Grave</code></td><td>Toggle Quake console</td></tr>
+                <tr><td><code>Super + Shift + Grave</code></td><td>Move window to Quake console</td></tr>
                 <tr><td><code>Super + Ctrl + Z</code></td><td>Zoom in on screen (repeat for more zoom)</td></tr>
                 <tr><td><code>Super + Ctrl + Alt + Z</code></td><td>Zoom fully out from screen</td></tr>
                 <tr><td><code>Super + /</code></td><td>Step forward through monitor scaling options</td></tr>
@@ -279,6 +287,7 @@
                 <tr><td><code>Ctrl + Alt + Tab</code></td><td>Cycle focus forward through monitors</td></tr>
                 <tr><td><code>Ctrl + Alt + Shift + Tab</code></td><td>Cycle focus backwards through monitors</td></tr>
             </table>
+            <p class="note">Each monitor has workspaces 1–10; <code>0</code> selects workspace 10. <strong>Grave</strong> is the backtick key (<code>`</code>). Add <code>Shift</code> to the smaller/bigger resize shortcuts for vertical resizing.</p>
         </section>
 
         <section>
@@ -287,17 +296,16 @@
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Ctrl + A</code></td><td>Audio panel</td></tr>
                 <tr><td><code>Super + Ctrl + B</code></td><td>Bluetooth panel</td></tr>
-                <tr><td><code>Super + Ctrl + W</code></td><td>Wifi/network panel</td></tr>
+                <tr><td><code>Super + Ctrl + N</code></td><td>Wi-Fi/network panel</td></tr>
                 <tr><td><code>Super + Ctrl + D</code></td><td>Display panel</td></tr>
                 <tr><td><code>Super + Ctrl + P</code></td><td>Power panel</td></tr>
                 <tr><td><code>Super + Ctrl + Alt + D</code></td><td>Calendar panel</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + E</code></td><td>World clock panel</td></tr>
                 <tr><td><code>Super + Ctrl + 1-9</code></td><td>Toggle bar panel by position</td></tr>
                 <tr><td><code>Super + Ctrl + S</code></td><td>Share menu (via LocalSend)</td></tr>
-                <tr><td><code>Super + Ctrl + T</code></td><td>Activity (btop)</td></tr>
                 <tr><td><code>Super + Ctrl + C</code></td><td>Capture controls (screenshot/-recording/picker)</td></tr>
                 <tr><td><code>Super + Ctrl + O</code></td><td>Toggle menu</td></tr>
                 <tr><td><code>Super + Ctrl + H</code></td><td>Hardware menu</td></tr>
-                <tr><td><code>Super + Ctrl + Q</code></td><td>Calculator</td></tr>
                 <tr><td><code>Super + Ctrl + E</code></td><td>Emoji picker</td></tr>
                 <tr><td><code>Super + Ctrl + .</code></td><td>Transcode media</td></tr>
                 <tr><td><code>Super + Shift + Ctrl + A</code></td><td>Pick an AI agent</td></tr>
@@ -327,12 +335,15 @@
                 <tr><td><code>Super + Alt + Return</code></td><td>Tmux terminal</td></tr>
                 <tr><td><code>Super + Ctrl + Return</code></td><td>Herdr (agent manager)</td></tr>
                 <tr><td><code>Super + Shift + Return</code></td><td>Browser</td></tr>
+                <tr><td><code>Super + Shift + B</code></td><td>Browser (alternate shortcut)</td></tr>
                 <tr><td><code>Super + Shift + Alt + B</code></td><td>Browser (private/incognito)</td></tr>
                 <tr><td><code>Super + Shift + F</code></td><td>File manager</td></tr>
                 <tr><td><code>Super + Shift + Alt + F</code></td><td>File manager in cwd of terminal</td></tr>
                 <tr><td><code>Super + Shift + M</code></td><td>Music (Spotify)</td></tr>
                 <tr><td><code>Super + Shift + Alt + M</code></td><td>Music (cliamp)</td></tr>
                 <tr><td><code>Super + Shift + /</code></td><td>Password manager (1password)</td></tr>
+                <tr><td><code>Super + Shift + Q</code></td><td>Calculator (Omacalc)</td></tr>
+                <tr><td><code>Super + Shift + T</code></td><td>Activity (btop)</td></tr>
                 <tr><td><code>Super + Shift + N</code></td><td>Editor (Neovim)</td></tr>
                 <tr><td><code>Super + Shift + C</code></td><td>Calendar (HEY)</td></tr>
                 <tr><td><code>Super + Shift + E</code></td><td>Email (HEY)</td></tr>
@@ -344,34 +355,46 @@
                 <tr><td><code>Super + Shift + S</code></td><td>Google Maps</td></tr>
                 <tr><td><code>Super + Shift + Alt + G</code></td><td>Messenger (WhatsApp)</td></tr>
                 <tr><td><code>Super + Shift + Ctrl + G</code></td><td>Messenger (Google)</td></tr>
-                <tr><td><code>Super + Shift + D</code></td><td>Docker (LazyDocker)</td></tr>
+                <tr><td><code>Super + Shift + D</code></td><td>Docker (if LazyDocker is installed)</td></tr>
                 <tr><td><code>Super + Shift + O</code></td><td>Obsidian</td></tr>
                 <tr><td><code>Super + Shift + W</code></td><td>Writing (Omawrite)</td></tr>
                 <tr><td><code>Super + Shift + X</code></td><td>X</td></tr>
                 <tr><td><code>Super + Shift + Alt + X</code></td><td>X Compose</td></tr>
                 <tr><td><code>Super + Shift + Y</code></td><td>YouTube</td></tr>
             </table>
-            <p class="note">Change or add bindings in <code>~/.config/hypr/bindings.lua</code>.</p>
+            <p class="note">Change or add bindings in <code>~/.config/hypr/bindings.lua</code>. Optional app shortcuts require the app and preinstalled bindings to be enabled.</p>
         </section>
 
         <section>
             <h2>Universal Clipboard</h2>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + A</code></td><td>Select all (outside terminal)</td></tr>
                 <tr><td><code>Super + C</code></td><td>Copy</td></tr>
                 <tr><td><code>Super + X</code></td><td>Cut (not in terminal)</td></tr>
                 <tr><td><code>Super + V</code></td><td>Paste</td></tr>
                 <tr><td><code>Super + Ctrl + V</code></td><td>Clipboard manager</td></tr>
             </table>
-            <p class="note">These unified clipboard hotkeys work everywhere, including the terminal.</p>
+            <p class="note">Copy and paste also work in terminals. Select all and cut send the app's <code>Ctrl + A/X</code> shortcuts.</p>
+        </section>
+
+        <section>
+            <h2>Input Languages</h2>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Super + I</code></td><td>Switch input language</td></tr>
+                <tr><td><code>Super + Shift + I</code></td><td>Switch input language in reverse</td></tr>
+            </table>
+            <p class="note">Requires configured input methods.</p>
         </section>
 
         <section>
             <h2>Capture</h2>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
-                <tr><td><code>Super + Ctrl + C</code></td><td>Capture menu (for keyboards w/o PrintScr)</td></tr>
+                <tr><td><code>Super + Ctrl + C</code></td><td>Capture menu</td></tr>
                 <tr><td><code>Print Screen</code></td><td>Screenshot</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + C</code></td><td>Screenshot (without Print Screen key)</td></tr>
                 <tr><td><code>Alt + Print Screen</code></td><td>Screenrecord</td></tr>
                 <tr><td><code>Super + Print Screen</code></td><td>Color picker</td></tr>
                 <tr><td><code>Super + Ctrl + Print Screen</code></td><td>Text extraction to clipboard</td></tr>
@@ -379,10 +402,18 @@
                 <tr><td><code>Super + Alt + ]</code></td><td>Make webcam overlay larger while recording</td></tr>
                 <tr><td><code>Alt + Shift + L</code></td><td>Copy current URL from webapp or Chromium</td></tr>
                 <tr><td><code>Alt + Shift + D</code></td><td>Download the video on the current page to <code>~/Videos</code></td></tr>
-                <tr><td><code>Super + Ctrl + X</code></td><td>Start/stop dictation (requires Install &gt; AI &gt; Dictation)</td></tr>
-                <tr><td><code>F9</code></td><td>Push-to-talk dictation (requires Install &gt; AI &gt; Dictation)</td></tr>
+                <tr><td><code>Super + Ctrl + X</code></td><td>Start/stop dictation</td></tr>
+                <tr><td><code>Right Alt</code> / <code>F9</code></td><td>Push-to-talk dictation (hold to speak)</td></tr>
             </table>
-            <p class="note">Start and stop screen recordings with the same hotkey. All capture options also live under <strong>Trigger &gt; Capture</strong> in the Omarchy menu (<code>Super + Space</code>).</p>
+            <p class="note">Configure dictation under <strong>Setup &gt; Defaults &gt; Dictation</strong>; Voxtype or Superwhisper must be installed. Start and stop recordings with the same hotkey. Capture options also live under <strong>Trigger &gt; Capture</strong> (<code>Super + Space</code>).</p>
+            <h3>While selecting a capture region</h3>
+            <table class="compact">
+                <tr><th>Hotkey</th><th>Function</th></tr>
+                <tr><td><code>Return</code></td><td>Capture highlighted window</td></tr>
+                <tr><td><code>Ctrl + Return</code></td><td>Capture entire screen</td></tr>
+                <tr><td><code>Tab</code> / <code>Ctrl + Tab</code></td><td>Select next/previous window</td></tr>
+                <tr><td><code>Arrows</code></td><td>Select window in that direction</td></tr>
+            </table>
         </section>
 
         <section>
@@ -391,9 +422,10 @@
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + ,</code></td><td>Dismiss latest notification</td></tr>
                 <tr><td><code>Super + Shift + ,</code></td><td>Dismiss all notifications</td></tr>
-                <tr><td><code>Super + Ctrl + ,</code></td><td>Toggle silencing notifications</td></tr>
+                <tr><td><code>Super + Ctrl + ,</code></td><td>Control notifications with the keyboard</td></tr>
                 <tr><td><code>Super + Alt + ,</code></td><td>Invoke most recent notification</td></tr>
                 <tr><td><code>Super + Shift + Alt + ,</code></td><td>Open notification history</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + ,</code></td><td>Toggle silencing notifications</td></tr>
             </table>
         </section>
 
@@ -401,8 +433,10 @@
             <h2>Style</h2>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
-                <tr><td><code>Super + Ctrl + Shift + Space</code></td><td>Pick a new theme</td></tr>
-                <tr><td><code>Super + Ctrl + Space</code></td><td>Pick theme background</td></tr>
+                <tr><td><code>Super + Ctrl + T</code></td><td>Pick a new theme</td></tr>
+                <tr><td><code>Super + Ctrl + W</code></td><td>Pick theme background</td></tr>
+                <tr><td><code>Super + Ctrl + Shift + Space</code></td><td>Pick a new theme (alternate shortcut)</td></tr>
+                <tr><td><code>Super + Ctrl + Space</code></td><td>Pick theme background (alternate shortcut)</td></tr>
                 <tr><td><code>Super + Backspace</code></td><td>Toggle transparency on a window</td></tr>
                 <tr><td><code>Super + Ctrl + Backspace</code></td><td>Toggle single-window square aspect</td></tr>
             </table>
@@ -414,13 +448,13 @@
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Super + Ctrl + I</code></td><td>Toggle locking on idle</td></tr>
-                <tr><td><code>Super + Ctrl + N</code></td><td>Toggle nightlight display temperature</td></tr>
                 <tr><td><code>Super + Ctrl + Delete</code></td><td>Toggle laptop display on/off</td></tr>
                 <tr><td><code>Super + Ctrl + Alt + Delete</code></td><td>Toggle laptop display mirroring</td></tr>
                 <tr><td><code>Super + Shift + Space</code></td><td>Toggle the top bar</td></tr>
                 <tr><td><code>Shift + Mute</code></td><td>Switch to next audio output</td></tr>
                 <tr><td><code>Shift + Play</code></td><td>Switch to next media source</td></tr>
                 <tr><td><code>Super + Shift + Backspace</code></td><td>Toggle window gaps</td></tr>
+                <tr><td><code>Super + Ctrl + Alt + F</code></td><td>Toggle full screen desktop (bar + gaps)</td></tr>
             </table>
         </section>
 
@@ -512,16 +546,17 @@
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Ctrl + Shift + E</code></td><td>New split below</td></tr>
-                <tr><td><code>Ctrl + Shift + O</code></td><td>New split besides</td></tr>
+                <tr><td><code>Ctrl + Shift + O</code></td><td>New split beside</td></tr>
                 <tr><td><code>Ctrl + Alt + Arrows</code></td><td>Move between splits</td></tr>
-                <tr><td><code class="sm">Super + Ctrl + Shift + Arrows</code></td><td>Resize split by 10 lines</td></tr>
                 <tr><td><code class="sm">Super + Ctrl + Shift + Alt + Arrows</code></td><td>Resize split by 100 lines</td></tr>
                 <tr><td><code>Ctrl + Shift + T</code></td><td>New tab</td></tr>
-                <tr><td><code>Ctrl + Shift + Arrows</code></td><td>Move between tabs</td></tr>
-                <tr><td><code>Alt + Numbers</code></td><td>Go to specific tab</td></tr>
+                <tr><td><code>Ctrl + Shift + Left/Right</code></td><td>Move between tabs</td></tr>
+                <tr><td><code>Alt + 1-8</code></td><td>Go to specific tab</td></tr>
+                <tr><td><code>Alt + 9</code></td><td>Go to last tab</td></tr>
                 <tr><td><code>Shift + Pg Up/Down</code></td><td>Scroll the history</td></tr>
                 <tr><td><code>Ctrl + Left mouse</code></td><td>Open link in browser</td></tr>
             </table>
+            <p class="note">Ghostty's default <code>Super + Ctrl + Shift + Arrows</code> resizes splits by 10 lines, but Omarchy uses it to move windows between monitors. Rebind it to use 10-line resizing.</p>
         </section>
 
         <section>
@@ -536,71 +571,72 @@
 
         <section>
             <h2>Neovim (w/ lazyvim)</h2>
+            <p class="note">Normal mode; <code>Space</code> is the leader. Type lowercase letters as shown; <code>Shift</code> is explicit.</p>
             <h3>Navigation</h3>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
                 <tr><td><code>Space</code></td><td>Show command options</td></tr>
                 <tr><td><code>Space Space</code></td><td>Open file via fuzzy search</td></tr>
-                <tr><td><code>Space E</code></td><td>Toggle sidebar</td></tr>
-                <tr><td><code>Space G G</code></td><td>Show git controls</td></tr>
-                <tr><td><code>Space S G</code></td><td>Search file content</td></tr>
-                <tr><td><code>Ctrl + W W</code></td><td>Jump between sidebar and editor</td></tr>
+                <tr><td><code>Space e</code></td><td>Toggle sidebar</td></tr>
+                <tr><td><code>Space g g</code></td><td>Show git controls</td></tr>
+                <tr><td><code>Space s g</code></td><td>Search file content</td></tr>
+                <tr><td><code>Ctrl + w</code>, then <code>w</code></td><td>Jump between sidebar and editor</td></tr>
                 <tr><td><code>Ctrl + Left/Right</code></td><td>Change size of sidebar</td></tr>
                 <tr><td><code>Shift + H</code></td><td>Go to left file tab</td></tr>
                 <tr><td><code>Shift + L</code></td><td>Go to right file tab</td></tr>
-                <tr><td><code>Space B D</code></td><td>Close file tab</td></tr>
+                <tr><td><code>Space b d</code></td><td>Close file tab (buffer)</td></tr>
             </table>
-            <h3>While in sidebar</h3>
+            <h3>While in Neo-tree sidebar</h3>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Function</th></tr>
-                <tr><td><code>A</code></td><td>Add new file in parent dir</td></tr>
+                <tr><td><code>a</code></td><td>Add new file in parent dir</td></tr>
                 <tr><td><code>Shift + A</code></td><td>Add new subdir in parent dir</td></tr>
-                <tr><td><code>D</code></td><td>Delete highlighted file/dir</td></tr>
-                <tr><td><code>M</code></td><td>Move highlighted file/dir</td></tr>
-                <tr><td><code>R</code></td><td>Rename highlighted file/dir</td></tr>
+                <tr><td><code>d</code></td><td>Delete highlighted file/dir</td></tr>
+                <tr><td><code>m</code></td><td>Move highlighted file/dir</td></tr>
+                <tr><td><code>r</code></td><td>Rename highlighted file/dir</td></tr>
                 <tr><td><code>?</code></td><td>Show help for all commands</td></tr>
             </table>
         </section>
 
         <section>
             <h2>Quick Emojis</h2>
-            <p class="note">For the full picker use <code>Super + Ctrl + E</code>, or grab one of these quick combos:</p>
+            <p class="note">For the full picker use <code>Super + Ctrl + E</code>. For compose sequences, press <code>Shift + CapsLock</code>, release both, then type the lowercase keys shown.</p>
             <table class="compact">
                 <tr><th>Hotkey</th><th>EM</th><th>Clue</th></tr>
-                <tr><td><code>CapsLock M S</code></td><td>😄</td><td>smile</td></tr>
-                <tr><td><code>CapsLock M C</code></td><td>😂</td><td>cry</td></tr>
-                <tr><td><code>CapsLock M L</code></td><td>😍</td><td>love</td></tr>
-                <tr><td><code>CapsLock M V</code></td><td>✌️</td><td>victory</td></tr>
-                <tr><td><code>CapsLock M H</code></td><td>❤️</td><td>heart</td></tr>
-                <tr><td><code>CapsLock M Y</code></td><td>👍</td><td>yes</td></tr>
-                <tr><td><code>CapsLock M N</code></td><td>👎</td><td>no</td></tr>
-                <tr><td><code>CapsLock M F</code></td><td>🖕</td><td>fuck</td></tr>
-                <tr><td><code>CapsLock M W</code></td><td>🤞</td><td>wish</td></tr>
-                <tr><td><code>CapsLock M R</code></td><td>🤘</td><td>rock</td></tr>
-                <tr><td><code>CapsLock M K</code></td><td>😘</td><td>kiss</td></tr>
-                <tr><td><code>CapsLock M E</code></td><td>🙄</td><td>eyeroll</td></tr>
-                <tr><td><code>CapsLock M I</code></td><td>😉</td><td>wink</td></tr>
-                <tr><td><code>CapsLock M P</code></td><td>🙏</td><td>pray</td></tr>
-                <tr><td><code>CapsLock M D</code></td><td>🤤</td><td>drool</td></tr>
-                <tr><td><code>CapsLock M M</code></td><td>💰</td><td>money</td></tr>
-                <tr><td><code>CapsLock M X</code></td><td>🎉</td><td>xellebrate</td></tr>
-                <tr><td><code>CapsLock M 1</code></td><td>💯</td><td>100%</td></tr>
-                <tr><td><code>CapsLock M T</code></td><td>🥂</td><td>toast</td></tr>
-                <tr><td><code>CapsLock M O</code></td><td>👌</td><td>ok</td></tr>
-                <tr><td><code>CapsLock M G</code></td><td>👋</td><td>greeting</td></tr>
-                <tr><td><code>CapsLock M A</code></td><td>💪</td><td>arm</td></tr>
-                <tr><td><code>CapsLock M B</code></td><td>🤯</td><td>blowing</td></tr>
+                <tr><td><code>Shift + CapsLock m s</code></td><td>😄</td><td>smile</td></tr>
+                <tr><td><code>Shift + CapsLock m c</code></td><td>😂</td><td>cry</td></tr>
+                <tr><td><code>Shift + CapsLock m l</code></td><td>😍</td><td>love</td></tr>
+                <tr><td><code>Shift + CapsLock m v</code></td><td>✌️</td><td>victory</td></tr>
+                <tr><td><code>Shift + CapsLock m h</code></td><td>❤️</td><td>heart</td></tr>
+                <tr><td><code>Shift + CapsLock m y</code></td><td>👍</td><td>yes</td></tr>
+                <tr><td><code>Shift + CapsLock m n</code></td><td>👎</td><td>no</td></tr>
+                <tr><td><code>Shift + CapsLock m f</code></td><td>🖕</td><td>fuck</td></tr>
+                <tr><td><code>Shift + CapsLock m w</code></td><td>🤞</td><td>wish</td></tr>
+                <tr><td><code>Shift + CapsLock m r</code></td><td>🤘</td><td>rock</td></tr>
+                <tr><td><code>Shift + CapsLock m k</code></td><td>😘</td><td>kiss</td></tr>
+                <tr><td><code>Shift + CapsLock m e</code></td><td>🙄</td><td>eyeroll</td></tr>
+                <tr><td><code>Shift + CapsLock m i</code></td><td>😉</td><td>wink</td></tr>
+                <tr><td><code>Shift + CapsLock m p</code></td><td>🙏</td><td>pray</td></tr>
+                <tr><td><code>Shift + CapsLock m d</code></td><td>🤤</td><td>drool</td></tr>
+                <tr><td><code>Shift + CapsLock m m</code></td><td>💰</td><td>money</td></tr>
+                <tr><td><code>Shift + CapsLock m x</code></td><td>🎉</td><td>xellebrate</td></tr>
+                <tr><td><code>Shift + CapsLock m 1</code></td><td>💯</td><td>100%</td></tr>
+                <tr><td><code>Shift + CapsLock m t</code></td><td>🥂</td><td>toast</td></tr>
+                <tr><td><code>Shift + CapsLock m o</code></td><td>👌</td><td>ok</td></tr>
+                <tr><td><code>Shift + CapsLock m g</code></td><td>👋</td><td>greeting</td></tr>
+                <tr><td><code>Shift + CapsLock m a</code></td><td>💪</td><td>arm</td></tr>
+                <tr><td><code>Shift + CapsLock m b</code></td><td>🤯</td><td>blowing</td></tr>
             </table>
         </section>
 
         <section>
             <h2>Quick Completions</h2>
-            <p class="note">Add your own in <code>~/.XCompose</code>, then run <code>omarchy-restart-xcompose</code> to reload.</p>
+            <p class="note">Press <code>Shift + CapsLock</code>, release both, then type the remaining keys. Add your own in <code>~/.XCompose</code>; run <code>omarchy-restart-xcompose</code> to reload.</p>
             <table class="compact">
                 <tr><th>Hotkey</th><th>Completion</th></tr>
-                <tr><td><code>CapsLock Space Space</code></td><td>— (mdash)</td></tr>
-                <tr><td><code>CapsLock Space N</code></td><td>Your name (as entered on setup)</td></tr>
-                <tr><td><code>CapsLock Space E</code></td><td>Your email (as entered on setup)</td></tr>
+                <tr><td><code>Shift + CapsLock Space Space</code></td><td>— (mdash)</td></tr>
+                <tr><td><code>Shift + CapsLock Space n</code></td><td>Your name (as entered on setup)</td></tr>
+                <tr><td><code>Shift + CapsLock Space e</code></td><td>Your email (as entered on setup)</td></tr>
             </table>
         </section>
     </div>
